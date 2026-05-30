@@ -20,3 +20,10 @@ This project is a fully functional, serverless web application built on AWS. It 
 ## 📂 Project Structure
 - `/frontend`: Contains the `index.html` file and frontend logic.
 - `/backend`: Contains the Python code for the Lambda function.
+
+## ⚙️ How it works
+1. **Frontend:** A user visits the static site hosted on S3.
+2. **API Trigger:** The browser performs a GET request to the API Gateway.
+3. **Compute:** API Gateway triggers the Lambda function.
+4. **Data:** Lambda updates the visitor count in DynamoDB using the Boto3 library and returns the new value.
+5. **Display:** The JavaScript on the frontend updates the page content dynamically.
